@@ -29,7 +29,7 @@ ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 
 # Download and install Hadoop
 RUN wget https://downloads.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz -P /tmp \
-    && tar -xzf /tmp/hadoop-$HADOOP_VERSION.tar.gz -C /opt \
+    && tar -xzf /tmp/hadoop-$HADOOP_VERSION.tar.gz -C /opt/vendor \
     && rm /tmp/hadoop-$HADOOP_VERSION.tar.gz
 
 # Copy configuration files
