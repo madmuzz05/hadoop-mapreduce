@@ -32,9 +32,9 @@ RUN wget https://downloads.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoo
     && tar -xzf /tmp/hadoop-$HADOOP_VERSION.tar.gz -C /opt \
     && rm /tmp/hadoop-$HADOOP_VERSION.tar.gz
 
-# Copy mapper and reducer scripts
-COPY mapper.py /opt/mapper.py
-COPY reducer.py /opt/reducer.py
+# Copy configuration files
+
+COPY . /opt/
 
 # Ensure Python scripts are executable
 RUN chmod +x /opt/mapper.py /opt/reducer.py
