@@ -12,12 +12,12 @@ This project contains a MapReduce implementation for counting words using Hadoop
 
 1. Build the Docker image:
     ```sh
-    docker build -t hadoop-mapreduce .
+    docker compose build && docker compose up -d
     ```
 
 2. Run the Docker container:
     ```sh
-    docker run -it --name hadoop-container -v $(pwd):/opt hadoop-mapreduce bash
+    docker run -it hadoop-hadoop
     ```
 
 3. Download the input file:
