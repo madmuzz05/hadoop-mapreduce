@@ -18,6 +18,9 @@ RUN ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime && echo "Etc/UTC" > /etc/t
 # Create symlink for Python
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
+# Create folder vendor
+RUN mkdir -p /opt/vendor
+
 # Set environment variables
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64
 ENV HADOOP_VERSION=3.2.4
