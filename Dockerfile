@@ -27,6 +27,8 @@ ENV HADOOP_VERSION=3.2.4
 ENV HADOOP_HOME=/opt/vendor/hadoop-$HADOOP_VERSION
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 
+COPY . /opt/
+
 # Download and install Hadoop
 RUN wget https://downloads.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz -P /tmp \
     && tar -xzf /tmp/hadoop-$HADOOP_VERSION.tar.gz -C /opt/vendor \
@@ -34,7 +36,6 @@ RUN wget https://downloads.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoo
 
 # Copy configuration files
 
-COPY . /opt/
 
 # Ensure Python scripts are executable
 RUN chmod +x /opt/mapper.py /opt/reducer.py
