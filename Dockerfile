@@ -21,7 +21,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 # Set environment variables
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64
 ENV HADOOP_VERSION=3.2.4
-ENV HADOOP_HOME=/opt/hadoop-$HADOOP_VERSION
+ENV HADOOP_HOME=/opt/vendor/hadoop-$HADOOP_VERSION
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 
 # Download and install Hadoop
